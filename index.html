@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.skypack.dev/@ionic/core@7/css/core.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.skypack.dev/@ionic/core@7/css/ionic.bundle.css"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/avenir-next-cyr"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/rockwell-nova"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+      h2,
+      ion-title {
+        font-family: 'Rockwell Nova', sans-serif;
+      }
+
+      p {
+        font-family: 'Avenir Next Cyr Light', sans-serif;
+        margin-top: 0;
+      }
+
+      p strong {
+        font-family: 'Avenir Next Cyr Medium', sans-serif;
+      }
+
+      p em {
+        font-family: 'Avenir Next Cyr Medium', sans-serif;
+      }
+
+      p em strong {
+        font-family: 'Avenir Next Cyr Heavy', sans-serif;
+      }
+    </style>
+
+    <script>
+      window.Ionic = {
+        config: {
+          mode: 'ios',
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <ion-app>
+      <ion-content class="ion-padding">
+        <ion-menu content-id="main-content">
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Menu Content</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding"
+            >This is the menu content.</ion-content
+          >
+        </ion-menu>
+        <div class="ion-page" id="main-content">
+          <ion-header>
+            <ion-toolbar>
+              <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+              </ion-buttons>
+              <ion-title>Easter Allcomers Gathering</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <ion-note>
+              <p>Use the menu at the top left to jump to a specific song.</p>
+            </ion-note>
+
+            <section>
+              <h2>Opening songs</h2>
+
+              <article>
+                <p>
+                  <strong>Open the eyes of my heart</strong>, Lord,<br />
+                  open the eyes of my heart.<br />
+                  I want to see you, I want to see you.
+                </p>
+
+                <p>
+                  <em>
+                    To see you high and lifted up,<br />
+                    shining in the light of Your glory.<br />
+                    Pour out your power and love<br />
+                    as we sing holy, holy, holy.
+                  </em>
+                </p>
+
+                <p>
+                  Holy, holy, holy, holy, holy, holy,<br />
+                  holy, holy, holy, I want to see you
+                </p>
+              </article>
+            </section>
+          </ion-content>
+        </div>
+      </ion-content>
+    </ion-app>
+  </body>
+</html>
