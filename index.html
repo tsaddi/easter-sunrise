@@ -29,6 +29,14 @@
         font-family: 'Rockwell Nova', sans-serif;
       }
 
+      ion-menu ion-label {
+        font-family: 'Avenir Next Cyr Light', sans-serif !important;
+      }
+
+      ion-menu ion-button {
+        font-family: 'Avenir Next Cyr Medium', sans-serif;
+      }
+
       p {
         font-family: 'Avenir Next Cyr Light', sans-serif;
         margin-top: 0;
@@ -50,7 +58,7 @@
     <script>
       window.Ionic = {
         config: {
-          mode: 'ios',
+          mode: 'md',
         },
       };
     </script>
@@ -62,12 +70,49 @@
         <ion-menu content-id="main-content">
           <ion-header>
             <ion-toolbar>
-              <ion-title>Menu Content</ion-title>
+              <ion-title>Jump to song</ion-title>
             </ion-toolbar>
           </ion-header>
-          <ion-content class="ion-padding"
-            >This is the menu content.</ion-content
-          >
+          <ion-content class="ion-padding">
+            <ion-list inset="false" lines="full">
+              <ion-item-group>
+                <ion-item-divider>
+                  <ion-label>Opening songs</ion-label>
+                </ion-item-divider>
+                <ion-item>
+                  <ion-label>
+                    <ion-menu-toggle>
+                      <ion-button
+                        fill="clear"
+                        expand="full"
+                        href="#open-the-eyes-of-my-heart"
+                      >
+                        Open the eyes of my heart
+                      </ion-button>
+                    </ion-menu-toggle>
+                  </ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>
+                    <ion-menu-toggle>
+                      <ion-button
+                        fill="clear"
+                        expand="full"
+                        href="#i-cast-my-mind-to-calvary"
+                      >
+                        I cast my mind to Calvary
+                      </ion-button>
+                    </ion-menu-toggle>
+                  </ion-label>
+                </ion-item>
+              </ion-item-group>
+              <ion-item-group>
+                <ion-item-divider>
+                  <ion-label>Additional songs</ion-label>
+                </ion-item-divider>
+              </ion-item-group>
+            </ion-list>
+          </ion-content>
         </ion-menu>
         <div class="ion-page" id="main-content">
           <ion-header>
@@ -86,7 +131,7 @@
             <section>
               <h2>Opening songs</h2>
 
-              <article>
+              <article id="open-the-eyes-of-my-heart">
                 <p>
                   <strong>Open the eyes of my heart</strong>, Lord,<br />
                   open the eyes of my heart.<br />
@@ -108,25 +153,46 @@
                 </p>
               </article>
 
-              <article>
+              <article id="i-cast-my-mind-to-calvary">
                 <p>
-                  <strong>Open the eyes of my heart</strong>, Lord,<br />
-                  open the eyes of my heart.<br />
-                  I want to see you, I want to see you.
+                  <strong>I cast my mind to Calvary</strong><br />
+                  where Jesus bled and died for me.<br />
+                  I see His wounds, His hands, His feet.<br />
+                  My Saviour on that cursed tree.
+                </p>
+
+                <p>
+                  His body bound and drenched in tears,<br />
+                  they laid Him down in Joseph's tomb.<br />
+                  The entrance sealed by heavy stone,<br />
+                  Messiah still and all alone.
                 </p>
 
                 <p>
                   <em>
-                    To see you high and lifted up,<br />
-                    shining in the light of Your glory.<br />
-                    Pour out your power and love<br />
-                    as we sing holy, holy, holy.
+                    O praise the Name of the Lord our God,<br />
+                    O praise His Name forevermore.<br />
+                    For endless days we will sing Your praise<br />
+                    oh Lord, oh Lord our God.
                   </em>
                 </p>
 
                 <p>
-                  Holy, holy, holy, holy, holy, holy,<br />
-                  holy, holy, holy, I want to see you
+                  Then on the third at break of dawn<br />
+                  the Son of heaven rose again.<br />
+                  O trampled death where is your sting?<br />
+                  The angels roar for Christ the King.
+                </p>
+
+                <p>
+                  <em> O praise the Name… </em>
+                </p>
+
+                <p>
+                  He shall return in robes of white,<br />
+                  The blazing Son shall pierce the night.<br />
+                  And I will rise among the saints,<br />
+                  My gaze transfixed on Jesus’ face.
                 </p>
               </article>
             </section>
