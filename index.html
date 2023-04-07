@@ -1,204 +1,507 @@
 <html>
-  <head>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.skypack.dev/@ionic/core@7/css/core.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.skypack.dev/@ionic/core@7/css/ionic.bundle.css"
-    />
-    <link
-      href="https://fonts.cdnfonts.com/css/avenir-next-cyr"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.cdnfonts.com/css/rockwell-nova"
-      rel="stylesheet"
-    />
 
-    <style type="text/css">
-      article + article {
-        margin-top: 2rem;
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.skypack.dev/@ionic/core@7/css/core.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.skypack.dev/@ionic/core@7/css/ionic.bundle.css" />
+  <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/rockwell-nova" rel="stylesheet" />
+
+  <style type="text/css">
+    @-webkit-keyframes flash {
+
+      from,
+      50%,
+      to {
+        opacity: 1;
       }
 
-      h2,
-      ion-title {
-        font-family: 'Rockwell Nova', sans-serif;
+      25%,
+      75% {
+        opacity: 0.6;
+      }
+    }
+
+    @keyframes flash {
+
+      from,
+      50%,
+      to {
+        opacity: 1;
       }
 
-      ion-menu ion-label {
-        font-family: 'Avenir Next Cyr Light', sans-serif !important;
+      25%,
+      75% {
+        opacity: 0.6;
       }
+    }
 
-      ion-menu ion-button {
-        font-family: 'Avenir Next Cyr Medium', sans-serif;
-      }
+    article+article {
+      margin-top: 2rem;
+      transition: background-color 2s x 0
+    }
 
-      p {
-        font-family: 'Avenir Next Cyr Light', sans-serif;
-        margin-top: 0;
-      }
+    article:target {
+      animation: flash;
+      animation-duration: 2s;
+    }
 
-      p strong {
-        font-family: 'Avenir Next Cyr Medium', sans-serif;
-      }
+    h2,
+    ion-title {
+      font-family: 'Rockwell Nova', sans-serif;
+    }
 
-      p em {
-        font-family: 'Avenir Next Cyr Medium', sans-serif;
-      }
+    ion-menu ion-item,
+    ion-menu ion-label,
+    ion-menu ion-text {
+      font-family: 'Avenir Next Cyr Light', sans-serif !important;
+    }
 
-      p em strong {
-        font-family: 'Avenir Next Cyr Heavy', sans-serif;
-      }
-    </style>
+    p {
+      font-family: 'Avenir Next Cyr Light', sans-serif;
+      margin-top: 0;
+    }
 
-    <script>
-      window.Ionic = {
+    p strong {
+      font-family: 'Avenir Next Cyr Medium', sans-serif;
+    }
+
+    p em {
+      font-family: 'Avenir Next Cyr Medium', sans-serif;
+    }
+
+    p em strong {
+      font-family: 'Avenir Next Cyr Heavy', sans-serif;
+    }
+  </style>
+
+  <script>
+    window.Ionic = {
         config: {
           mode: 'md',
         },
       };
-    </script>
-  </head>
+  </script>
+</head>
 
-  <body>
-    <ion-app>
-      <ion-content class="ion-padding">
-        <ion-menu content-id="main-content">
-          <ion-header>
-            <ion-toolbar>
-              <ion-title>Jump to song</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
-            <ion-list inset="false" lines="full">
-              <ion-item-group>
-                <ion-item-divider>
-                  <ion-label>Opening songs</ion-label>
-                </ion-item-divider>
-                <ion-item>
+<body>
+  <ion-app>
+    <ion-content class="ion-padding">
+      <ion-menu content-id="main-content">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Jump to song</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-list inset="false" lines="full">
+            <ion-item-group>
+              <ion-item-divider>
+                <ion-label>Opening songs</ion-label>
+              </ion-item-divider>
+              <ion-menu-toggle>
+                <ion-item href="#open-the-eyes-of-my-heart">
+                  Open the eyes of my heart
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#i-cast-my-mind-to-calvary">
                   <ion-label>
-                    <ion-menu-toggle>
-                      <ion-button
-                        fill="clear"
-                        expand="full"
-                        href="#open-the-eyes-of-my-heart"
-                      >
-                        Open the eyes of my heart
-                      </ion-button>
-                    </ion-menu-toggle>
+                    I cast my mind to Calvary<br>
+                    <ion-text color="medium">O praise the Name (Anástasis)</ion-note>
                   </ion-label>
                 </ion-item>
-                <ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#the-sun-comes-up">
                   <ion-label>
-                    <ion-menu-toggle>
-                      <ion-button
-                        fill="clear"
-                        expand="full"
-                        href="#i-cast-my-mind-to-calvary"
-                      >
-                        I cast my mind to Calvary
-                      </ion-button>
-                    </ion-menu-toggle>
+                    The sun comes up<br>
+                    <ion-text color="medium">10,000 Reasons</ion-text>
                   </ion-label>
                 </ion-item>
-              </ion-item-group>
-              <ion-item-group>
-                <ion-item-divider>
-                  <ion-label>Additional songs</ion-label>
-                </ion-item-divider>
-              </ion-item-group>
-            </ion-list>
-          </ion-content>
-        </ion-menu>
-        <div class="ion-page" id="main-content">
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-menu-button></ion-menu-button>
-              </ion-buttons>
-              <ion-title>Easter Allcomers Gathering</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
-            <ion-note>
-              <p>Use the menu at the top left to jump to a specific song.</p>
-            </ion-note>
+              </ion-menu-toggle>
+            </ion-item-group>
+            <ion-item-group>
+              <ion-item-divider>
+                <ion-label>Additional songs</ion-label>
+              </ion-item-divider>
+            </ion-item-group>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+      <div class="ion-page" id="main-content">
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Easter Allcomers Gathering</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-note>
+            <p>Use the menu at the top left to jump to a specific song.</p>
+          </ion-note>
 
-            <section>
-              <h2>Opening songs</h2>
+          <section>
+            <h2>Opening songs</h2>
 
-              <article id="open-the-eyes-of-my-heart">
-                <p>
-                  <strong>Open the eyes of my heart</strong>, Lord,<br />
+            <article id="open-the-eyes-of-my-heart">
+              <p>
+                <strong>Open the eyes of my heart</strong>, Lord,<br />
                   open the eyes of my heart.<br />
                   I want to see you, I want to see you.
-                </p>
+              </p>
 
-                <p>
-                  <em>
+              <p>
+                <em>
                     To see you high and lifted up,<br />
                     shining in the light of Your glory.<br />
                     Pour out your power and love<br />
                     as we sing holy, holy, holy.
                   </em>
-                </p>
+              </p>
 
-                <p>
-                  Holy, holy, holy, holy, holy, holy,<br />
+              <p>
+                Holy, holy, holy, holy, holy, holy,<br />
                   holy, holy, holy, I want to see you
-                </p>
-              </article>
+              </p>
+            </article>
 
-              <article id="i-cast-my-mind-to-calvary">
-                <p>
-                  <strong>I cast my mind to Calvary</strong><br />
+            <article id="i-cast-my-mind-to-calvary">
+              <p>
+                <strong>I cast my mind to Calvary</strong><br />
                   where Jesus bled and died for me.<br />
                   I see His wounds, His hands, His feet.<br />
                   My Saviour on that cursed tree.
-                </p>
+              </p>
 
-                <p>
-                  His body bound and drenched in tears,<br />
+              <p>
+                His body bound and drenched in tears,<br />
                   they laid Him down in Joseph's tomb.<br />
                   The entrance sealed by heavy stone,<br />
                   Messiah still and all alone.
-                </p>
+              </p>
 
-                <p>
-                  <em>
+              <p>
+                <em>
                     O praise the Name of the Lord our God,<br />
                     O praise His Name forevermore.<br />
                     For endless days we will sing Your praise<br />
                     oh Lord, oh Lord our God.
                   </em>
-                </p>
+              </p>
 
-                <p>
-                  Then on the third at break of dawn<br />
+              <p>
+                Then on the third at break of dawn<br />
                   the Son of heaven rose again.<br />
                   O trampled death where is your sting?<br />
                   The angels roar for Christ the King.
-                </p>
+              </p>
 
-                <p>
-                  <em> O praise the Name… </em>
-                </p>
+              <p>
+                <em>
+                    O praise the Name of the Lord our God,<br />
+                    O praise His Name forevermore.<br />
+                    For endless days we will sing Your praise<br />
+                    oh Lord, oh Lord our God.
+                  </em>
+              </p>
 
-                <p>
-                  He shall return in robes of white,<br />
+              <p>
+                He shall return in robes of white,<br />
                   The blazing Son shall pierce the night.<br />
                   And I will rise among the saints,<br />
                   My gaze transfixed on Jesus’ face.
-                </p>
-              </article>
-            </section>
-          </ion-content>
-        </div>
-      </ion-content>
-    </ion-app>
-  </body>
+              </p>
+            </article>
+
+            <article id="the-sun-comes-up">
+              <p>
+                <strong>The sun comes up</strong>, it’s a new day dawning;<br />
+                  it’s time to sing Your song again.<br />
+                  Whatever may pass and whatever lies before me,<br />
+                  let me be singing when the evening comes.
+              </p>
+
+              <p>
+                <em>
+                    Bless the Lord, O my soul;<br />
+                    O my soul, worship His holy name.<br />
+                    Sing like never before, O my soul.<br />
+                    I’ll worship Your holy name.
+                  </em>
+              </p>
+            </article>
+
+            <article id="what-a-beautiful-name">
+              <p>
+                <em>
+                  <strong>What a beautiful Name</strong> it is,<br />
+                  what a beautiful Name it is,<br />
+                  the Name of Jesus Christ my King.<br />
+                  What a beautiful Name it is, nothing compares to this;<br />
+                  what a beautiful Name it is, the Name of Jesus.
+                </em>
+              </p>
+              
+              <p>
+                You were the Word at the beginning,<br />
+                one with God the Lord Most High;<br />
+                Your hidden glory in creation<br />
+                now revealed in You our Christ.
+              </p>
+              
+              <p>
+                <em>
+                  What a beautiful Name it is,<br />
+                  what a beautiful Name it is,<br />
+                  the Name of Jesus Christ my King.<br />
+                  What a beautiful Name it is, nothing compares to this;<br />
+                  what a beautiful Name it is, the Name of Jesus.
+                </em>
+              </p>
+              
+              <p>
+                You didn&rsquo;t want heaven without us<br />
+                so Jesus, You brought heaven down.<br />
+                My sin was great, Your love was greater;<br />
+                what could separate us now?
+              </p>
+              
+              <p>
+                <em>
+                  What a wonderful Name it is,<br />
+                  what a wonderful Name it is,<br />
+                  the Name of Jesus Christ my King.<br />
+                  What a wonderful Name it is, nothing compares to this;<br />
+                  what a wonderful Name it is, the Name of Jesus.
+                </em>
+              </p>
+              
+              <p>
+                Death could not hold You, the veil tore before You,<br />
+                You silence the boast of sin and grave.<br />
+                The heavens are roaring the praise of Your glory<br />
+                for You are raised to life again.<br />
+                You have no rival, You have no equal,<br />
+                now and forever God You reign;<br />
+                Yours is the kingdom, Yours is the glory,<br />
+                Yours is the Name above all names.
+              </p>
+              
+              <p>
+                <em>
+                  What a powerful Name it is,<br />
+                  what a powerful Name it is,<br />
+                  the Name of Jesus Christ my King.<br />
+                  What a powerful Name it is, nothing compares to this;<br />
+                  what a powerful Name it is, the Name of Jesus.
+                </em>
+              </p>
+            </article>
+
+            <article>
+              <p><strong><em>O praise the Name of the Lord our God,<br />
+              O praise His Name forevermore.<br />
+              For endless days we will sing Your praise<br />
+              oh Lord, oh Lord our God.</em></strong></p>
+            </article>
+
+            <article id="i-exalt-thee">
+              <p><strong>I exalt Thee</strong>, I exalt Thee, I exalt Thee, oh Lord.</p>
+            </article>
+
+            <article id="jesus-christ-is-risen-today">
+              <p><strong>Jesus Christ is risen today! <em>Hallelujah!</em></strong><br />
+              Our triumphant holy day; <strong><em>Hallelujah!</em></strong><br />
+              Who did once upon the cross; <strong><em>Hallelujah!</em></strong><br />
+              Suffer to redeem our loss; <strong><em>Hallelujah!</em></strong></p>
+              
+              <p>Hymns of praise then let us sing; <strong><em>Hallelujah!</em></strong><br />
+              Unto Christ, our heavenly King; <strong><em>Hallelujah!</em></strong><br />
+              Who endured the cross and grave; <strong><em>Hallelujah!</em></strong><br />
+              Sinners to redeem and save: <strong><em>Hallelujah!</em></strong></p>
+              
+              <p><strong>Thine be the glory</strong>, risen, conquering Son;<br />
+              endless is the victory Thou o&#39;er death hast won.<br />
+              Angels in bright raiment rolled the stone away,<br />
+              kept the folded grave clothes where Thy body lay.</p>
+              
+              <p><strong><em>Thine be the glory risen conquering Son;<br />
+              endless is the victory Thou o&#39;er death hast won.</em></strong></p>
+              
+              <p>Lo! Jesus meets us, risen from the tomb!<br />
+              Lovingly He greets us, scatters fear and gloom.<br />
+              Let the church with gladness hymns of triumph sing.<br />
+              For her Lord now liveth, death hath lost its sting.</p>
+            </article>
+          </section>
+
+          <section>
+            <p><strong>Additional songs</strong></p>
+
+            <article id="alleluia-alleluia">
+              <p><strong><em><img alt="pastedGraphic.png" src="blob:https://onlinehtmleditor.dev/af514ab0-94e4-4110-8126-cb6bbe8e657b" />Alleluia, alleluia, give thanks to the risen Lord.</em></strong><br />
+              <strong><em>Alleluia, alleluia, give praise to His name.</em></strong></p>
+              
+              <p>Jesus is Lord of all the earth.<br />
+              He is the King of creation.</p>
+              
+              <p>Spread the good news o&rsquo;er all the earth.<br />
+              Jesus has died and has risen.</p>
+              
+              <p>Come, let us praise the living God,<br />
+              Joyfully sing to our Saviour.</p>
+              
+              <p><img alt="pastedGraphic_1.png" src="blob:https://onlinehtmleditor.dev/2b00e58f-14f7-499a-843a-c4fd23f2c596" /> <strong>He is Lord</strong>, He is Lord,<br />
+              He is risen from the dead and He is Lord.<br />
+              Every knee shall bow, every tongue confess<br />
+              that Jesus Christ is Lord.</p>
+              
+              <p>He&rsquo;s my Lord&hellip;</p>
+              
+              <p><strong><em><img alt="pastedGraphic_2.png" src="blob:https://onlinehtmleditor.dev/7fa81e8d-76cf-43f0-b663-d2435326b139" />He has risen, He has risen, He has risen, Jesus is alive.</em></strong></p>
+              
+              <p>When the life flowed from His body,<br />
+              seemed like Jesus&rsquo; mission failed.<br />
+              But His sacrifice accomplished,<br />
+              victory over sin and hell.</p>
+              
+              <p>In the grave God did not leave Him,<br />
+              for His body to decay;<br />
+              raised to life, the great awakening,<br />
+              Satan&rsquo;s power He overcame.</p>
+              
+              <p>If there were no resurrection,<br />
+              we ourselves could not be raised;<br />
+              but the Son of God is living,<br />
+              so our hope is not in vain.</p>
+              
+              <p>When the Lord rides out of heaven,<br />
+              mighty angels at His side,<br />
+              they will sound the final trumpet,<br />
+              from the grave we shall arise.</p>
+              
+              <p>He has given life immortal,<br />
+              we shall see Him face to face;<br />
+              through eternity we&rsquo;ll praise Him,<br />
+              Christ, the Champion of our faith.</p>
+              
+              <p><img alt="pastedGraphic_3.png" src="blob:https://onlinehtmleditor.dev/db95fb73-bc5f-4c87-bb3e-a2daa77fc700" /> <strong>Jesus Christ</strong>, I think upon Your sacrifice,<br />
+              You became nothing, poured out to death.<br />
+              Many times I&rsquo;ve wondered at Your gift of life,<br />
+              and I&rsquo;m in that place once again.<br />
+              I&rsquo;m in that place once again.</p>
+              
+              <p><strong><em>And once again I look upon the cross where You died,<br />
+              I&rsquo;m humbled by Your mercy and I&rsquo;m broken inside.<br />
+              Once again I thank You, once again I pour out my life.</em></strong></p>
+              
+              <p>Now You are exalted to the highest place,<br />
+              King of the heavens, where one day I&rsquo;ll bow.<br />
+              But for now, I marvel at this saving grace,<br />
+              and I&rsquo;m full of praise once again.<br />
+              I&rsquo;m full of praise once again.</p>
+              
+              <p>Thank You for the cross, thank You for the cross,<br />
+              thank You for the cross, my Friend.</p>
+              
+              <p><img alt="pastedGraphic_4.png" src="blob:https://onlinehtmleditor.dev/3443dd60-8af4-4ca4-a6ac-4ea119e0b5d6" /> <strong>This joyful Eastertide</strong> away with sin and sorrow!<br />
+              My love, the Crucified, has sprung to life this morrow.</p>
+              
+              <p><strong><em>Had Christ, who once was slain,</em></strong><br />
+              <strong><em>not burst his three-day prison, our faith had been in vain:</em></strong><br />
+              <strong><em>but now hath Christ arisen, arisen, arisen;<br />
+              but now has Christ arisen!</em></strong></p>
+              
+              <p>Death&rsquo;s flood has lost its chill since Jesus crossed the river;<br />
+              lover of souls, from ill my passing soul deliver.</p>
+              
+              <p>My flesh in hope shall rest and for a season slumber<br />
+              till trump from east to west shall wake the dead in number.</p>
+              
+              <p><img alt="pastedGraphic_5.png" src="blob:https://onlinehtmleditor.dev/8b92d40d-4be8-4842-a1ad-9b634df6dd41" /> <strong>When I survey</strong> the wondrous cross on which the Prince of glory died, my richest gain I count but loss, and pour contempt on all my pride.</p>
+              
+              <p>See from His head, His hands, His feet, sorrow and love flow mingled down; did e&rsquo;er such love and sorrow meet or thorns compose so rich a crown?</p>
+              
+              <p>Were the whole realm of nature mine, that were an offering far too small; love so amazing, so divine demands my soul, my life, my all.</p>
+              
+              <p><strong>Closing songs</strong></p>
+              
+              <p><strong>I stand amazed</strong> in the presence of Jesus the Nazarene,<br />
+              and wonder how He could love me;<br />
+              a sinner, condemned, unclean.</p>
+              
+              <p><strong><em>How marvellous! How wonderful!<br />
+              And my song shall ever be:<br />
+              How marvellous! How wonderful<br />
+              is my Saviour&#39;s love for me.</em></strong></p>
+              
+              <p>He took my sin and my sorrows,<br />
+              He made them His very own.<br />
+              He bore the burden to Calvary,<br />
+              and suffered and died alone.</p>
+              
+              <p>And with ransomed in glory, His face I at last shall see.<br />
+              &rsquo;Twill be my joy through the ages to sing of His love for me.</p>
+              
+              <p><strong>Who breaks the power</strong> of sin and darkness,<br />
+              whose love is mighty and so much stronger?<br />
+              The King of glory, the King above all kings.<br />
+              Who shakes the whole earth with holy thunder<br />
+              and leaves us breathless in awe and wonder?<br />
+              The King of glory, the King above all kings.</p>
+              
+              <p><strong><em>This is amazing grace, this is unfailing love<br />
+              that You would take my place,<br />
+              that You would bear my cross.<br />
+              You laid down Your life that I would be set free.<br />
+              Jesus, I sing for all that You&#39;ve done for me.</em></strong></p>
+              
+              <p>Who brings our chaos back into order?<br />
+              Who makes the orphan a son and daughter?<br />
+              The King of glory, the King of glory.<br />
+              Who rules the nations with truth and justice,<br />
+              shines like the sun in all of its brilliance?<br />
+              The King of glory, the King above all kings.</p>
+              
+              <p>Worthy is the Lamb who was slain,<br />
+              Worthy is the King who conquered the grave.</p>
+              
+              <p><strong><em>Then sings my soul, my Saviour God, to thee:<br />
+              How great thou art! How great thou art!</em></strong></p>
+              
+              <p>And when I think that God, his Son not sparing,<br />
+              sent Him to die, I scarce can take it in<br />
+              that on the cross, my burden gladly bearing,<br />
+              he bled and died to take away my sin.</p>
+              
+              <p><strong>The greatest day in history</strong>,<br />
+              death is beaten, You have rescued me.<br />
+              Sing it out: Jesus is alive.<br />
+              The empty cross, the empty grave,<br />
+              life eternal, You have won the day.<br />
+              Shout it out: Jesus is alive, He&rsquo;s alive.</p>
+              
+              <p><strong><em>And oh, happy day, happy day, You washed my sin away.</em></strong><br />
+              <strong><em>Oh, happy day, happy day, I&rsquo;ll never be the same.<br />
+              Forever I am changed.</em></strong></p>
+              
+              <p>When I stand in that place,<br />
+              free at last, meeting face to face,<br />
+              I am Yours, Jesus, You are mine.<br />
+              Endless joy, perfect peace, earthly pain finally will cease.<br />
+              Celebrate, Jesus is alive, He&rsquo;s alive.</p>
+              
+              <p>Oh, what a glorious day,&nbsp; what a glorious way<br />
+              that You have saved me.<br />
+              And oh, what a glorious day, what a glorious name.</p>
+            </article>
+          </section>
+        </ion-content>
+      </div>
+    </ion-content>
+  </ion-app>
+</body>
+
 </html>
