@@ -69,8 +69,29 @@
       font-family: 'Avenir Next Cyr Medium', sans-serif;
     }
 
-    p em strong {
+    p em strong,
+    p strong em {
       font-family: 'Avenir Next Cyr Heavy', sans-serif;
+    }
+
+    p strong strong {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Avenir Next Cyr Heavy', sans-serif;
+      font-style: normal;
+      text-align: center;
+      line-height: 1em;
+      border-radius: 1em;
+      width: 1em;
+      height: 1em;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      p strong strong {
+        background-color: #fff;
+        color: #121212;
+      }
     }
   </style>
 
@@ -119,11 +140,101 @@
                   </ion-label>
                 </ion-item>
               </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#what-a-beautiful-name">
+                  What a beautiful Name
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#i-exalt-thee">
+                  I exalt Thee
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#jesus-christ-is-risen-today">
+                  Jesus Christ is risen today!
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#thine-be-the-glory">
+                  Thine be the glory
+                </ion-item>
+              </ion-menu-toggle>
             </ion-item-group>
             <ion-item-group>
               <ion-item-divider>
                 <ion-label>Additional songs</ion-label>
               </ion-item-divider>
+              <ion-menu-toggle>
+                <ion-item href="#alleluia-alleluia">
+                  <ion-label>
+                    1. Alleluia, alleluia<br>
+                    <ion-text color="medium">Give thanks to the risen Lord</ion-text>
+                  </ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#he-is-lord">
+                  2. He is Lord
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#he-has-risen">
+                  3. He has risen
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#jesus-christ">
+                  <ion-label>
+                    4. Jesus Christ<br>
+                    <ion-text color="medium">Once again</ion-text>
+                  </ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#this-joyful-eastertide">
+                  5. This joyful Eastertide
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#when-i-survey">
+                  6. When I survey
+                </ion-item>
+              </ion-menu-toggle>
+            </ion-item-group>
+            <ion-item-group>
+              <ion-item-divider>
+                <ion-label>Closing songs</ion-label>
+              </ion-item-divider>
+              <ion-menu-toggle>
+                <ion-item href="#i-stand-amazed">
+                  I stand amazed
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#who-breaks-the-power">
+                  <ion-label>
+                    Who breaks the power<br>
+                    <ion-text color="medium">This is amazing grace</ion-text>
+                  </ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#then-sings-my-soul">
+                  <ion-label>
+                    Then sings my soul<br>
+                    <ion-text color="medium">This is amazing grace</ion-text>
+                  </ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                <ion-item href="#the-greatest-day-in-history">
+                  <ion-label>
+                    The greatest day in history<br>
+                    <ion-text color="medium">Happy day</ion-text>
+                  </ion-label>
+                </ion-item>
+              </ion-menu-toggle>
             </ion-item-group>
           </ion-list>
         </ion-content>
@@ -341,7 +452,7 @@
             <p><strong>Additional songs</strong></p>
 
             <article id="alleluia-alleluia">
-              <p><strong><em><img alt="pastedGraphic.png" src="blob:https://onlinehtmleditor.dev/af514ab0-94e4-4110-8126-cb6bbe8e657b" />Alleluia, alleluia, give thanks to the risen Lord.</em></strong><br />
+              <p><strong><em><strong>1</strong> Alleluia, alleluia, give thanks to the risen Lord.</em></strong><br />
               <strong><em>Alleluia, alleluia, give praise to His name.</em></strong></p>
               
               <p>Jesus is Lord of all the earth.<br />
@@ -352,15 +463,19 @@
               
               <p>Come, let us praise the living God,<br />
               Joyfully sing to our Saviour.</p>
-              
-              <p><img alt="pastedGraphic_1.png" src="blob:https://onlinehtmleditor.dev/2b00e58f-14f7-499a-843a-c4fd23f2c596" /> <strong>He is Lord</strong>, He is Lord,<br />
+            </article>
+
+            <article id="he-is-lord">
+              <p><strong><strong>2</strong> He is Lord</strong>, He is Lord,<br />
               He is risen from the dead and He is Lord.<br />
               Every knee shall bow, every tongue confess<br />
               that Jesus Christ is Lord.</p>
               
               <p>He&rsquo;s my Lord&hellip;</p>
-              
-              <p><strong><em><img alt="pastedGraphic_2.png" src="blob:https://onlinehtmleditor.dev/7fa81e8d-76cf-43f0-b663-d2435326b139" />He has risen, He has risen, He has risen, Jesus is alive.</em></strong></p>
+            </article>
+
+            <article id="he-has-risen">
+              <p><strong><em><strong>3</strong> He has risen, He has risen, He has risen, Jesus is alive.</em></strong></p>
               
               <p>When the life flowed from His body,<br />
               seemed like Jesus&rsquo; mission failed.<br />
@@ -386,8 +501,10 @@
               we shall see Him face to face;<br />
               through eternity we&rsquo;ll praise Him,<br />
               Christ, the Champion of our faith.</p>
-              
-              <p><img alt="pastedGraphic_3.png" src="blob:https://onlinehtmleditor.dev/db95fb73-bc5f-4c87-bb3e-a2daa77fc700" /> <strong>Jesus Christ</strong>, I think upon Your sacrifice,<br />
+            </article>
+
+            <article id="jesus-christ">
+              <p><strong><strong>4</strong> Jesus Christ</strong>, I think upon Your sacrifice,<br />
               You became nothing, poured out to death.<br />
               Many times I&rsquo;ve wondered at Your gift of life,<br />
               and I&rsquo;m in that place once again.<br />
@@ -405,8 +522,10 @@
               
               <p>Thank You for the cross, thank You for the cross,<br />
               thank You for the cross, my Friend.</p>
-              
-              <p><img alt="pastedGraphic_4.png" src="blob:https://onlinehtmleditor.dev/3443dd60-8af4-4ca4-a6ac-4ea119e0b5d6" /> <strong>This joyful Eastertide</strong> away with sin and sorrow!<br />
+            </article>
+
+            <article id="this-joyful-eastertide">
+              <p><strong><strong>5</strong> This joyful Eastertide</strong> away with sin and sorrow!<br />
               My love, the Crucified, has sprung to life this morrow.</p>
               
               <p><strong><em>Had Christ, who once was slain,</em></strong><br />
@@ -419,15 +538,21 @@
               
               <p>My flesh in hope shall rest and for a season slumber<br />
               till trump from east to west shall wake the dead in number.</p>
-              
-              <p><img alt="pastedGraphic_5.png" src="blob:https://onlinehtmleditor.dev/8b92d40d-4be8-4842-a1ad-9b634df6dd41" /> <strong>When I survey</strong> the wondrous cross on which the Prince of glory died, my richest gain I count but loss, and pour contempt on all my pride.</p>
+            </article>
+
+            <article id="when-i-survey">
+              <p><strong><strong>6</strong> When I survey</strong> the wondrous cross on which the Prince of glory died, my richest gain I count but loss, and pour contempt on all my pride.</p>
               
               <p>See from His head, His hands, His feet, sorrow and love flow mingled down; did e&rsquo;er such love and sorrow meet or thorns compose so rich a crown?</p>
               
               <p>Were the whole realm of nature mine, that were an offering far too small; love so amazing, so divine demands my soul, my life, my all.</p>
-              
-              <p><strong>Closing songs</strong></p>
-              
+            </article>
+          </section>
+
+          <section>
+            <h2>Closing songs</h2>
+
+            <article id="i-stand-amazed">
               <p><strong>I stand amazed</strong> in the presence of Jesus the Nazarene,<br />
               and wonder how He could love me;<br />
               a sinner, condemned, unclean.</p>
@@ -444,7 +569,9 @@
               
               <p>And with ransomed in glory, His face I at last shall see.<br />
               &rsquo;Twill be my joy through the ages to sing of His love for me.</p>
-              
+            </article>
+
+            <article id="who-breaks-the-power">
               <p><strong>Who breaks the power</strong> of sin and darkness,<br />
               whose love is mighty and so much stronger?<br />
               The King of glory, the King above all kings.<br />
@@ -467,7 +594,9 @@
               
               <p>Worthy is the Lamb who was slain,<br />
               Worthy is the King who conquered the grave.</p>
-              
+            </article>
+
+            <article id="then-sings-my-soul">
               <p><strong><em>Then sings my soul, my Saviour God, to thee:<br />
               How great thou art! How great thou art!</em></strong></p>
               
@@ -475,7 +604,9 @@
               sent Him to die, I scarce can take it in<br />
               that on the cross, my burden gladly bearing,<br />
               he bled and died to take away my sin.</p>
-              
+            </article>
+
+            <article id="happy-day">
               <p><strong>The greatest day in history</strong>,<br />
               death is beaten, You have rescued me.<br />
               Sing it out: Jesus is alive.<br />
